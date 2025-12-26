@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsPortal 2025 - Berita Terkini & Terpercaya</title>
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6.5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-globe-asia me-2"></i>NewsPortal<span class="brand-year">2025</span>
+                </a>
+                
+                <!-- Breaking News Ticker -->
+                <div class="breaking-news-ticker d-none d-lg-flex">
+                    <span class="breaking-label">BREAKING:</span>
+                    <div class="ticker-content">
+                        <span id="breakingNewsText">Presiden Asia Tenggara Gelar KTT Darurat Bahas Krisis Iklim</span>
+                    </div>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-category="all"><i class="fas fa-home me-1"></i>Beranda</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-list me-1"></i>Kategori
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-category="nasional"><i class="fas fa-flag me-2"></i>Nasional</a></li>
+                                <li><a class="dropdown-item" href="#" data-category="internasional"><i class="fas fa-globe me-2"></i>Internasional</a></li>
+                                <li><a class="dropdown-item" href="#" data-category="ekonomi"><i class="fas fa-chart-line me-2"></i>Ekonomi & Bisnis</a></li>
+                                <li><a class="dropdown-item" href="#" data-category="teknologi"><i class="fas fa-microchip me-2"></i>Teknologi</a></li>
+                                <li><a class="dropdown-item" href="#" data-category="olahraga"><i class="fas fa-futbol me-2"></i>Olahraga</a></li>
+                                <li><a class="dropdown-item" href="#" data-category="hiburan"><i class="fas fa-film me-2"></i>Hiburan</a></li>
+                                <li><a class="dropdown-item" href="#" data-category="kesehatan"><i class="fas fa-heartbeat me-2"></i>Kesehatan</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="trendingBtn"><i class="fas fa-fire me-1"></i>Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="videoNewsBtn"><i class="fas fa-play-circle me-1"></i>Video</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link" href="#" id="searchMobileBtn"><i class="fas fa-search"></i></a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
+                        <div class="input-group search-container d-none d-lg-flex">
+                            <input class="form-control" type="search" placeholder="Cari berita..." id="searchInput">
+                            <button class="btn btn-search" type="button" id="searchBtn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <button class="btn btn-theme ms-2" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Search -->
+        <div class="mobile-search d-lg-none" id="mobileSearch">
+            <div class="container">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Cari berita...">
+                    <button class="btn btn-search" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-close-search" type="button" id="closeSearchBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-main">
+                        <div class="hero-badge">FEATURED</div>
+                        <h1 id="heroTitle">Indonesia Pimpin KTT ASEAN 2025, Fokus pada Ekonomi Digital dan Keberlanjutan</h1>
+                        <p id="heroExcerpt" class="lead">Presiden Joko Widodo membuka KTT ASEAN ke-42 dengan menekankan pentingnya kolaborasi regional dalam menghadapi tantangan ekonomi digital dan transisi energi hijau di tengah ketegangan geopolitik global.</p>
+                        <div class="hero-meta">
+                            <div class="author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Reporter" class="author-img">
+                                <div>
+                                    <div class="author-name">Aditya Pratama</div>
+                                    <div class="meta-info">
+                                        <span><i class="far fa-calendar me-1"></i>15 Januari 2025</span>
+                                        <span class="ms-3"><i class="far fa-clock me-1"></i>6 menit baca</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-actions">
+                                <button class="btn btn-outline-light btn-sm me-2" id="shareHeroBtn">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                <button class="btn btn-outline-light btn-sm" id="saveHeroBtn">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="hero-sidebar">
+                        <h5><i class="fas fa-bolt me-2"></i>Berita Terpopuler</h5>
+                        <div class="popular-list" id="popularNewsList">
+                            <!-- Popular news will be loaded here -->
+                        </div>
+                        
+                        <div class="weather-widget mt-4">
+                            <h6><i class="fas fa-cloud-sun me-2"></i>Cuaca Hari Ini</h6>
+                            <div class="weather-content">
+                                <div class="weather-main">
+                                    <div class="temp">32°C</div>
+                                    <div class="condition">Sebagian Berawan</div>
+                                    <div class="location">Jakarta</div>
+                                </div>
+                                <div class="weather-details">
+                                    <div class="detail-item">
+                                        <span>Kelembaban</span>
+                                        <strong>78%</strong>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>Angin</span>
+                                        <strong>12 km/j</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori Cepat -->
+    <section class="quick-categories py-4" data-aos="fade-up">
+        <div class="container">
+            <div class="row g-3" id="quickCategories">
+                <!-- Quick categories will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita Terbaru -->
+    <section class="latest-news py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Berita Terbaru</h2>
+                <div class="section-controls">
+                    <div class="view-switcher btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active" id="gridViewBtn">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" id="listViewBtn">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <div class="sort-dropdown">
+                        <select class="form-select form-select-sm" id="sortNews">
+                            <option value="latest">Terbaru</option>
+                            <option value="popular">Terpopuler</option>
+                            <option value="trending">Trending</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" id="newsContainer">
+                <!-- News articles will be loaded here -->
+            </div>
+            
+            <div class="text-center mt-5">
+                <button class="btn btn-load-more" id="loadMoreBtn">
+                    <i class="fas fa-sync-alt me-2"></i>Muat Lebih Banyak
+                </button>
+                <div class="loading-spinner d-none mt-3" id="loadingSpinner">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Berita -->
+    <section class="video-news py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-play-circle me-3"></i>Berita Video</h2>
+                <a href="#" class="btn btn-link">Lihat Semua <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+            
+            <div class="row" id="videoNewsContainer">
+                <!-- Video news will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="newsletter-box">
+                        <i class="fas fa-paper-plane newsletter-icon"></i>
+                        <h3>Berlangganan Newsletter</h3>
+                        <p class="mb-4">Dapatkan berita terkini langsung di inbox Anda. Gratis dan tanpa spam.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Email Anda" required>
+                                <button class="btn btn-primary" type="submit">Berlangganan</button>
+                            </div>
+                            <div class="form-text mt-2">
+                                Dengan berlangganan, Anda menyetujui <a href="#">Syarat & Ketentuan</a> kami.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand">
+                        <i class="fas fa-globe-asia me-2"></i>NewsPortal<span class="brand-year">2025</span>
+                    </div>
+                    <p class="footer-desc mt-3">Portal berita terkini dan terpercaya dengan fokus pada akurasi dan kecepatan penyampaian informasi kepada masyarakat Indonesia.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-title">Perusahaan</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Redaksi</a></li>
+                        <li><a href="#">Kode Etik</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-title">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Berlangganan</a></li>
+                        <li><a href="#">Iklan</a></li>
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="#">Pedoman Media</a></li>
+                        <li><a href="#">API Developer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Kontak</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt me-3"></i>Jl. Sudirman Kav. 28, Jakarta 12920</li>
+                        <li><i class="fas fa-phone me-3"></i>(021) 1234-5678</li>
+                        <li><i class="fas fa-envelope me-3"></i>redaksi@newsportal2025.id</li>
+                    </ul>
+                    <div class="app-download mt-4">
+                        <h6>Download Aplikasi</h6>
+                        <div class="d-flex gap-2 mt-2">
+                            <a href="#" class="btn btn-app">
+                                <i class="fab fa-google-play me-2"></i>Google Play
+                            </a>
+                            <a href="#" class="btn btn-app">
+                                <i class="fab fa-apple me-2"></i>App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 NewsPortal. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Kebijakan Privasi</a>
+                    <a href="#" class="footer-link me-3">Syarat Layanan</a>
+                    <a href="#" class="footer-link">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal untuk Detail Berita -->
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="newsModalBody">
+                    <!-- Content will be loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="btn btn-scroll-top" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Scripts -->
+    <script src="js/news-data.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
